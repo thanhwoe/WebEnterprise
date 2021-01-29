@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "LOtkDAc9emZrz4LXYk97hBWJSjFnecw1k1REA7dcTIFi6wAF+I961HULtjGtXmg+d79WiFG0Rn4vHw7vbIVYtw==",
+  "dgSpecHash": "wYUGPk6YivwGuZjIzjnuoaNtGBoNAaU6ylR9EjoFYMfEQhfJ7I3ZMnBP/Qp6VD/zJQwiNxpAfysi45Kz/dGOAw==",
   "success": true,
   "projectFilePath": "C:\\Users\\DELL\\source\\repos\\WebEnterprise\\WebEnterprise\\WebEnterprise.csproj",
   "expectedPackageFiles": [
@@ -27,9 +27,14 @@
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.11\\microsoft.extensions.configuration.3.1.11.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.11\\microsoft.extensions.configuration.abstractions.3.1.11.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.1.11\\microsoft.extensions.configuration.binder.3.1.11.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\3.1.11\\microsoft.extensions.configuration.fileextensions.3.1.11.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.extensions.configuration.json\\3.1.11\\microsoft.extensions.configuration.json.3.1.11.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.11\\microsoft.extensions.dependencyinjection.3.1.11.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.11\\microsoft.extensions.dependencyinjection.abstractions.3.1.11.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.extensions.dependencymodel\\5.0.0\\microsoft.extensions.dependencymodel.5.0.0.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\3.1.11\\microsoft.extensions.fileproviders.abstractions.3.1.11.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\3.1.11\\microsoft.extensions.fileproviders.physical.3.1.11.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\3.1.11\\microsoft.extensions.filesystemglobbing.3.1.11.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.extensions.logging\\3.1.11\\microsoft.extensions.logging.3.1.11.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.11\\microsoft.extensions.logging.abstractions.3.1.11.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.extensions.options\\3.1.11\\microsoft.extensions.options.3.1.11.nupkg.sha512",

@@ -9,5 +9,7 @@ namespace WebEnterprise.Data.Entities
         public long ID { set; get; }
         public long UserID { set; get; }
         public string Name { set; get; }
+        public User User { get; set; }
+
     }
 }
