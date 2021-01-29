@@ -10,8 +10,8 @@ using WebEnterprise.Data.EF;
 namespace WebEnterprise.Data.Migrations
 {
     [DbContext(typeof(WebEnterpriseDbContext))]
-    [Migration("20210129055755_Initial")]
-    partial class Initial
+    [Migration("20210129145315_AspNetCoreDatabase")]
+    partial class AspNetCoreDatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,6 +20,101 @@ namespace WebEnterprise.Data.Migrations
                 .HasAnnotation("ProductVersion", "3.1.11")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("RoleId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AppRoleClaim");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<System.Guid>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AppUserClaims");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<System.Guid>", b =>
+                {
+                    b.Property<Guid>("UserId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProviderDisplayName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProviderKey")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UserId");
+
+                    b.ToTable("AppUserLogins");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<System.Guid>", b =>
+                {
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("RoleId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("UserId", "RoleId");
+
+                    b.ToTable("AppUserRoles");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<System.Guid>", b =>
+                {
+                    b.Property<Guid>("UserId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UserId");
+
+                    b.ToTable("AppUserToken");
+                });
 
             modelBuilder.Entity("WebEnterprise.Data.Entities.Comment", b =>
                 {
@@ -34,8 +129,8 @@ namespace WebEnterprise.Data.Migrations
                     b.Property<long>("DocumentID")
                         .HasColumnType("bigint");
 
-                    b.Property<long>("UserID")
-                        .HasColumnType("bigint");
+                    b.Property<Guid>("UserID")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("ID");
 
@@ -55,10 +150,6 @@ namespace WebEnterprise.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<byte[]>("Image")
                         .HasColumnType("varbinary(max)");
 
@@ -66,34 +157,55 @@ namespace WebEnterprise.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("NumberPhone")
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("ID");
 
                     b.ToTable("Contacts");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1L,
+                            ApartmentNumber = "04",
+                            NameStreet = "Doan Uan"
+                        });
                 });
 
             modelBuilder.Entity("WebEnterprise.Data.Entities.DepartmentCatelogory", b =>
                 {
-                    b.Property<long>("ID")
+                    b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint")
+                        .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long>("UserID")
-                        .HasColumnType("bigint");
-
                     b.HasKey("ID");
 
-                    b.HasIndex("UserID")
-                        .IsUnique();
-
                     b.ToTable("DepartmentCatelogorys");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            Name = "IT"
+                        },
+                        new
+                        {
+                            ID = 2,
+                            Name = "Design"
+                        },
+                        new
+                        {
+                            ID = 3,
+                            Name = "Business"
+                        },
+                        new
+                        {
+                            ID = 4,
+                            Name = "Tourism"
+                        });
                 });
 
             modelBuilder.Entity("WebEnterprise.Data.Entities.Document", b =>
@@ -116,8 +228,8 @@ namespace WebEnterprise.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long>("UserID")
-                        .HasColumnType("bigint");
+                    b.Property<Guid>("UserID")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("ID");
 
@@ -128,16 +240,21 @@ namespace WebEnterprise.Data.Migrations
 
             modelBuilder.Entity("WebEnterprise.Data.Entities.GroupUser", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ID");
+                    b.Property<string>("NormalizedName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
 
                     b.ToTable("GroupUsers");
                 });
@@ -159,6 +276,38 @@ namespace WebEnterprise.Data.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Megazines");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1L,
+                            DocumentID = 0L,
+                            Name = "Magazine Information Technology"
+                        },
+                        new
+                        {
+                            ID = 2L,
+                            DocumentID = 0L,
+                            Name = "Magazine Design"
+                        },
+                        new
+                        {
+                            ID = 3L,
+                            DocumentID = 0L,
+                            Name = "Magazine Business"
+                        },
+                        new
+                        {
+                            ID = 4L,
+                            DocumentID = 0L,
+                            Name = "Magazine Tourism"
+                        },
+                        new
+                        {
+                            ID = 5L,
+                            DocumentID = 0L,
+                            Name = "Magazine Information Technology"
+                        });
                 });
 
             modelBuilder.Entity("WebEnterprise.Data.Entities.SchoolYear", b =>
@@ -181,10 +330,15 @@ namespace WebEnterprise.Data.Migrations
 
             modelBuilder.Entity("WebEnterprise.Data.Entities.User", b =>
                 {
-                    b.Property<long>("ID")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<long>("ContactID")
                         .HasColumnType("bigint");
@@ -195,37 +349,75 @@ namespace WebEnterprise.Data.Migrations
                     b.Property<DateTime>("DateOfBirth")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("DepartmentCatelogoryID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
+
                     b.Property<string>("FirstName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(200)")
+                        .HasMaxLength(200);
 
                     b.Property<int>("GroupUserID")
                         .HasColumnType("int");
 
                     b.Property<string>("LastName")
                         .IsRequired()
+                        .HasColumnType("nvarchar(200)")
+                        .HasMaxLength(200);
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NormalizedUserName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("bit");
+
                     b.Property<int>("SchoolYearID")
                         .HasColumnType("int");
 
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("Sex")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("TwoFactorEnabled")
                         .HasColumnType("bit");
 
                     b.Property<string>("UserName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ID");
+                    b.HasKey("Id");
 
                     b.HasIndex("ContactID")
                         .IsUnique();
 
-                    b.HasIndex("GroupUserID")
+                    b.HasIndex("DepartmentCatelogoryID")
                         .IsUnique();
 
                     b.HasIndex("SchoolYearID")
@@ -239,15 +431,6 @@ namespace WebEnterprise.Data.Migrations
                     b.HasOne("WebEnterprise.Data.Entities.User", "User")
                         .WithMany("Comments")
                         .HasForeignKey("UserID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("WebEnterprise.Data.Entities.DepartmentCatelogory", b =>
-                {
-                    b.HasOne("WebEnterprise.Data.Entities.User", "User")
-                        .WithOne("DepartmentCatelogory")
-                        .HasForeignKey("WebEnterprise.Data.Entities.DepartmentCatelogory", "UserID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -275,9 +458,9 @@ namespace WebEnterprise.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("WebEnterprise.Data.Entities.GroupUser", "GroupUser")
+                    b.HasOne("WebEnterprise.Data.Entities.DepartmentCatelogory", "DepartmentCatelogory")
                         .WithOne("User")
-                        .HasForeignKey("WebEnterprise.Data.Entities.User", "GroupUserID")
+                        .HasForeignKey("WebEnterprise.Data.Entities.User", "DepartmentCatelogoryID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

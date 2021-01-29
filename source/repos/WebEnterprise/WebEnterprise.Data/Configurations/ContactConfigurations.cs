@@ -13,12 +13,10 @@ namespace WebEnterprise.Data.Configurations
         {
             builder.ToTable("Contacts");
             builder.HasKey(x => x.ID);
-            builder.Property(x => x.ApartmentNumber).IsRequired(true);
-            builder.Property(x => x.NameStreet).IsRequired(true);
-            builder.Property(x => x.Email).IsRequired(true);
+            builder.Property(x => x.ApartmentNumber);
+            builder.Property(x => x.NameStreet);
             builder.Property(x => x.Image);
-            builder.Property(x => x.NumberPhone);
-            builder.HasOne(x => x.User).WithOne(x => x.Contact).HasForeignKey<User>(x => x.ContactID);
+            builder.HasOne(x => x.Users).WithOne(x => x.Contacts).HasForeignKey<User>(x => x.ContactID);
         }
     }
 }

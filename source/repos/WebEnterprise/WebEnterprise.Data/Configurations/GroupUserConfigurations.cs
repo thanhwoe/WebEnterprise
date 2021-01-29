@@ -12,9 +12,7 @@ namespace WebEnterprise.Data.Configurations
         public void Configure(EntityTypeBuilder<GroupUser> builder)
         {
             builder.ToTable("GroupUsers");
-            builder.HasKey(x => x.ID);
-            builder.Property(x => x.Name).IsRequired(true);
-            builder.HasOne(x => x.User).WithOne(x => x.GroupUser).HasForeignKey<User>(x => x.GroupUserID);
+            builder.Property(x => x.Name);
         }
     }
 }

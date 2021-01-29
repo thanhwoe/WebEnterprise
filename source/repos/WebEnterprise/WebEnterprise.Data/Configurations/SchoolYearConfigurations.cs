@@ -13,9 +13,10 @@ namespace WebEnterprise.Data.Configurations
         {
             builder.ToTable("SchoolYears");
             builder.HasKey(x => x.ID);
-            builder.Property(x => x.StartDayYear).IsRequired(true);
-            builder.Property(x => x.EndDayYear).IsRequired(true);
-            builder.HasOne(x => x.User).WithOne(x => x.SchoolYear).HasForeignKey<User>(x => x.SchoolYearID);
+            builder.Property(x => x.UserID);
+            builder.Property(x => x.StartDayYear);
+            builder.Property(x => x.EndDayYear);
+            builder.HasOne(x => x.User).WithMany(x => x.SchoolYears).HasForeignKey(x => x.UserID);
         }
     }
 }

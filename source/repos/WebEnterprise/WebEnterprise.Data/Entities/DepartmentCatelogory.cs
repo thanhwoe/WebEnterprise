@@ -6,10 +6,9 @@ namespace WebEnterprise.Data.Entities
 {
     public class DepartmentCatelogory
     {
-        public long ID { set; get; }
-        public long UserID { set; get; }
+        public int ID { set; get; }
         public string Name { set; get; }
-        public User User { get; set; }
+        public User Users { get; set; }
 
     }
 }
