@@ -1,7 +1,0 @@
-C:\Users\DELL\source\repos\Keylogger\Keylogger\bin\Debug\Keylogger.exe.config
-C:\Users\DELL\source\repos\Keylogger\Keylogger\bin\Debug\Keylogger.exe
-C:\Users\DELL\source\repos\Keylogger\Keylogger\bin\Debug\Keylogger.pdb
-C:\Users\DELL\source\repos\Keylogger\Keylogger\obj\Debug\Keylogger.csprojAssemblyReference.cache
-C:\Users\DELL\source\repos\Keylogger\Keylogger\obj\Debug\Keylogger.csproj.CoreCompileInputs.cache
-C:\Users\DELL\source\repos\Keylogger\Keylogger\obj\Debug\Keylogger.exe
-C:\Users\DELL\source\repos\Keylogger\Keylogger\obj\Debug\Keylogger.pdb
