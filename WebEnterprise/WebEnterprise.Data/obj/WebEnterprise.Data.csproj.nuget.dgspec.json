@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL\\source\\repos\\WebEnterprise\\WebEnterprise.Data\\WebEnterprise.Data.csproj": {}
+    "C:\\Users\\DELL\\WebEnterprise\\WebEnterprise.Data\\WebEnterprise.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL\\source\\repos\\WebEnterprise\\WebEnterprise.Data\\WebEnterprise.Data.csproj": {
+    "C:\\Users\\DELL\\WebEnterprise\\WebEnterprise.Data\\WebEnterprise.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\source\\repos\\WebEnterprise\\WebEnterprise.Data\\WebEnterprise.Data.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\WebEnterprise\\WebEnterprise.Data\\WebEnterprise.Data.csproj",
         "projectName": "WebEnterprise.Data",
-        "projectPath": "C:\\Users\\DELL\\source\\repos\\WebEnterprise\\WebEnterprise.Data\\WebEnterprise.Data.csproj",
+        "projectPath": "C:\\Users\\DELL\\WebEnterprise\\WebEnterprise.Data\\WebEnterprise.Data.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\source\\repos\\WebEnterprise\\WebEnterprise.Data\\obj\\",
+        "outputPath": "C:\\Users\\DELL\\WebEnterprise\\WebEnterprise.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

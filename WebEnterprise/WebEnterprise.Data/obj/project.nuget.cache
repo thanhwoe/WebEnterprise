@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GU8bWOrWAsM0jJQO/5BPV9BQonVnb7RAW2Kqc2iNKapz2tkGgZTeQJ5WE6SaObV/00CNqFGRCyZMzwtMjiHVrg==",
+  "dgSpecHash": "wQiX7fxzR+/9v+3TS7Ggpl4y6Y1P0l5zANmPZj7v4sKGFzhyXGCGomFqZzNtap6k6TzYCw5RhDAYgz2cruGWYQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DELL\\source\\repos\\WebEnterprise\\WebEnterprise.Data\\WebEnterprise.Data.csproj",
+  "projectFilePath": "C:\\Users\\DELL\\WebEnterprise\\WebEnterprise.Data\\WebEnterprise.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL\\source\\repos\\WebEnterprise\\WebEnterprise.Application\\WebEnterprise.Application.csproj": {}
+    "C:\\Users\\DELL\\WebEnterprise\\WebEnterprise.Application\\WebEnterprise.Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL\\source\\repos\\WebEnterprise\\WebEnterprise.Application\\WebEnterprise.Application.csproj": {
+    "C:\\Users\\DELL\\WebEnterprise\\WebEnterprise.Application\\WebEnterprise.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\source\\repos\\WebEnterprise\\WebEnterprise.Application\\WebEnterprise.Application.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\WebEnterprise\\WebEnterprise.Application\\WebEnterprise.Application.csproj",
         "projectName": "WebEnterprise.Application",
-        "projectPath": "C:\\Users\\DELL\\source\\repos\\WebEnterprise\\WebEnterprise.Application\\WebEnterprise.Application.csproj",
+        "projectPath": "C:\\Users\\DELL\\WebEnterprise\\WebEnterprise.Application\\WebEnterprise.Application.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\source\\repos\\WebEnterprise\\WebEnterprise.Application\\obj\\",
+        "outputPath": "C:\\Users\\DELL\\WebEnterprise\\WebEnterprise.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
