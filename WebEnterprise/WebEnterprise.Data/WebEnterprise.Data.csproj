@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20210129055755_Initial.cs" />
+    <Compile Remove="Migrations\20210129055755_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20210129135421_AspNetCoreIdentityDatabase.cs" />
+    <Compile Remove="Migrations\20210129135421_AspNetCoreIdentityDatabase.Designer.cs" />
+    <Compile Remove="Migrations\20210129141315_AspNetCoreIdentityDatabase.cs" />
+    <Compile Remove="Migrations\20210129141315_AspNetCoreIdentityDatabase.Designer.cs" />
+    <Compile Remove="Migrations\20210129142310_AspNetCoreDatabase.cs" />
+    <Compile Remove="Migrations\20210129142310_AspNetCoreDatabase.Designer.cs" />
+    <Compile Remove="Migrations\20210129143323_AspNetCoreDatabase.cs" />
+    <Compile Remove="Migrations\20210129143323_AspNetCoreDatabase.Designer.cs" />
+    <Compile Remove="Migrations\20210129143610_AspNetCoreDatabase.cs" />
+    <Compile Remove="Migrations\20210129143610_AspNetCoreDatabase.Designer.cs" />
+    <Compile Remove="Migrations\20210129143958_AspNetCoreDatabase.cs" />
+    <Compile Remove="Migrations\20210129143958_AspNetCoreDatabase.Designer.cs" />
+    <Compile Remove="Migrations\20210129151403_SeedIdentityUser.cs" />
+    <Compile Remove="Migrations\20210129151403_SeedIdentityUser.Designer.cs" />
+    <Compile Remove="Migrations\20210129151915_SeedIdentityUser.cs" />
+    <Compile Remove="Migrations\20210129151915_SeedIdentityUser.Designer.cs" />
+    <Compile Remove="Migrations\20210129152046_SeedIdentityUser.cs" />
+    <Compile Remove="Migrations\20210129152046_SeedIdentityUser.Designer.cs" />
+    <Compile Remove="Migrations\20210129152452_SeedIdentityUser.cs" />
+    <Compile Remove="Migrations\20210129152452_SeedIdentityUser.Designer.cs" />
+    <Compile Remove="Migrations\20210129153021_SeedIdentityUser.cs" />
+    <Compile Remove="Migrations\20210129153021_SeedIdentityUser.Designer.cs" />
+    <Compile Remove="Migrations\20210129155821_SeedIdentityUser.cs" />
+    <Compile Remove="Migrations\20210129155821_SeedIdentityUser.Designer.cs" />
+    <Compile Remove="Migrations\20210129160936_SeedIdentityUser.cs" />
+    <Compile Remove="Migrations\20210129160936_SeedIdentityUser.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.Extensions" Version="5.0.2" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Razor" Version="5.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="3.1.11" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.11" />
+  </ItemGroup>
+
+</Project>
